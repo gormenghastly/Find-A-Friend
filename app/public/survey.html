@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Titan+One|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card col-lg-8" id="about-you">
+            <div class="card-header">
+                <h2 id="about">About You</h2>
+            </div>
+            <div class="card" id="form">
+                <form action="">
+                    <div class="form-group">
+                        <label class="label"> Your Name (required)</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label class="label"> Your Photo Link (required)</label>
+                        <input type="text" class="form-control" id="photo">
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question One</label>
+                        <p class="quest">You enjoy the outdoors.</p>
+                        <select class="form-control col-lg-4" id="questOne">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Two</label>
+                        <p class="quest">You are spontaneous.</p>
+                        <select class="form-control col-lg-4" id="questTwo">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Three</label>
+                        <p class="quest">You rarely get upset.</p>
+                        <select class="form-control col-lg-4" id="questThree">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Four</label>
+                        <p class="quest">You enjoy large groups of people.</p>
+                        <select class="form-control col-lg-4" id="questFour">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Five</label>
+                        <p class="quest">You can spend hours reading a book.</p>
+                        <select class="form-control col-lg-4" id="questFive">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Six</label>
+                        <p class="quest">You love movies.</p>
+                        <select class="form-control col-lg-4" id="questSix">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Seven</label>
+                        <p class="quest">Truth is more important than feelings.</p>
+                        <select class="form-control col-lg-4" id="questSeven">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Eight</label>
+                        <p class="quest">You are relaxed and easy going.</p>
+                        <select class="form-control col-lg-4" id="questEight">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Nine</label>
+                        <p class="quest">Concerts are the best form of entertainment.</p>
+                        <select class="form-control col-lg-4" id="questNine">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="questions">Question Ten</label>
+                        <p class="quest">You have compassion for others.</p>
+                        <select class="form-control col-lg-4" id="questTen">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <p class="lead">
+                        <button type="submit" class="btn btn-primary col-lg-12" id="submit">Find A Friend</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLongTitle">Your Friend is...</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="friend-name"></h4>
+                        <img src="" alt="friend photo" height="100" width="100" id="friend photo">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="api/friends">API FRIENDS LIST</a>
+        <span>|</span>
+        <a href="https://github.com/gormenghastly/Find-A-Friend.git" target="_blank">GITHUB REPO</a>
+        <br>
+    </div>
+    <script type="text/javascript">
+        $(document).on('click', '#submit', function () {
+            var newFriend = {
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
+                scores: [
+                    $('#questOne').val(),
+                    $('questTwo').val(),
+                    $('questThree').val(),
+                    $('questFour').val(),
+                    $('questFive').val(),
+                    $('questSix').val(),
+                    $('questSeven').val(),
+                    $('questEight').val(),
+                    $('questNine').val(),
+                    $('questTen').val(),
+                ]
+            }
+            console.log(newFriend);
+            var currentURL = window.location.origin;
+
+            $.post(currentURL + '/api/friends', newFriend, function (data) {
+
+                $('#name').val('');
+                $('#phone').val('');
+                $('#questOne').val('');
+                $('#questTwo').val('');
+                $('#questThree').val('');
+                $('#questFour').val('');
+                $('#questFive').val('');
+                $('#questSix').val('');
+                $('#questSeven').val('');
+                $('#questEight').val('');
+                $('#questNine').val('');
+                $('#questTen').val('');
+
+            });
+
+
+        });
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

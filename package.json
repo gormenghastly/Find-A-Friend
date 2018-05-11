@@ -1,0 +1,25 @@
+{
+  "name": "find-a-friend",
+  "version": "1.0.0",
+  "description": "app to find friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gormenghastly/Find-A-Friend.git"
+  },
+  "author": "jcw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gormenghastly/Find-A-Friend/issues"
+  },
+  "homepage": "https://github.com/gormenghastly/Find-A-Friend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.4"
+  }
+}

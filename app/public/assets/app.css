@@ -1,0 +1,56 @@
+body {
+  background: url('images/friends.jpeg');
+  background-size: 100%;
+}
+
+.jumbotron {
+  background-color: rgba(67, 160, 189, 0.705);
+  margin-top: 2em;
+}
+
+h1 {
+  font-family: 'Titan One', cursive;
+  font-size: 4em;
+}
+
+p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+}
+
+#about-you {
+  background-color: rgba(67, 160, 189, 0.5);
+  margin-top: 2em;
+}
+
+.card-header {
+  background-color: rgba(67, 160, 189);
+}
+
+#about {
+  font-family: 'Titan One', cursive;
+}
+
+form {
+  background-color: rgba(67, 160, 189, 0.5);
+  border: rgba(67, 160, 189, 0.5);
+}
+
+.label {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+label {
+  font-family: 'Titan One', cursive;
+}
+
+.quest {
+  font-size: 1.5em;
+}
+
+.btn {
+  color: black;
+  font-family: 'Titan One', cursive;
+}
