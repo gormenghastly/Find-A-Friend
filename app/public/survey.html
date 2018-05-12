@@ -155,7 +155,7 @@
                     </div>
                     <div class="modal-body">
                         <h4 id="friend-name"></h4>
-                        <img src="" alt="friend photo" height="200" width="200" id="friend-photo">
+                        <img id="friend-photo" src="" alt="friend photo">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -168,8 +168,15 @@
         <a href="https://github.com/gormenghastly/Find-A-Friend.git" target="_blank">GITHUB REPO</a>
         <br>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <script type="text/javascript">
-        $(document).on('click', '#submit', function () {
+        $('#submit').on('click', function (event) {
             event.preventDefault();
 
             var newFriend = {
@@ -177,24 +184,23 @@
                 photo: $('#photo').val().trim(),
                 scores: [
                     $('#questOne').val(),
-                    $('questTwo').val(),
-                    $('questThree').val(),
-                    $('questFour').val(),
-                    $('questFive').val(),
-                    $('questSix').val(),
-                    $('questSeven').val(),
-                    $('questEight').val(),
-                    $('questNine').val(),
-                    $('questTen').val(),
+                    $('#questTwo').val(),
+                    $('#questThree').val(),
+                    $('#questFour').val(),
+                    $('#questFive').val(),
+                    $('#questSix').val(),
+                    $('#questSeven').val(),
+                    $('#questEight').val(),
+                    $('#questNine').val(),
+                    $('#questTen').val(),
                 ]
             }
             console.log(newFriend);
-            var currentURL = window.location.origin;
 
-            $.post(currentURL + '/api/friends', newFriend, function (data) {
+            $.post('/api/friends', newFriend, function (data) {
 
                 $('#friend-name').text(data.name);
-                $('friend-photo').attr('src', data.photo);
+                $('#friend-photo').attr('src', data.photo);
                 $("#results-modal").modal('toggle');
             });
 
@@ -203,12 +209,6 @@
 
 
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

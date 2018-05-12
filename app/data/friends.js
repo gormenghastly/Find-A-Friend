@@ -34,6 +34,30 @@ var friendArr = [
     photo:
       'https://i.pinimg.com/originals/7f/18/bd/7f18bdeff7351f1b8227460586edd85d.jpg',
     scores: [5, 4, 1, 3, 1, 3, 5, 3, 2, 5]
+  },
+  {
+    name: 'Robert Smith',
+    photo:
+      'https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/9/7/1315401296507/Robert-Smith-007.jpg?w=300&q=55&auto=format&usm=12&fit=max&s=9f07f45f13c1c28e7e6eae0a1e37bad4',
+    scores: [1, 5, 2, 2, 3, 2, 5, 3, 5, 5]
+  },
+  {
+    name: 'Helen Mirren',
+    photo:
+      'https://ia.media-imdb.com/images/M/MV5BMjA4MzY2ODU2MV5BMl5BanBnXkFtZTcwOTQ3ODY4OQ@@._V1_UY317_CR18,0,214,317_AL_.jpg',
+    scores: [4, 4, 4, 4, 4, 3, 5, 4, 2, 4]
+  },
+  {
+    name: 'Donald Trump',
+    photo:
+      'https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/12/28/104919377-GettyImages-870730432-donald-trump.530x298.jpg?v=1514477270',
+    scores: [1, 5, 1, 3, 1, 1, 1, 1, 1, 1]
+  },
+  {
+    name: 'Stevie Nicks',
+    photo:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9KK-bh2v16230FdWTeMNlqhQAeY01ySBeV6pu554XODeMmp0f',
+    scores: [3, 5, 3, 3, 3, 3, 5, 4, 5, 5]
   }
 ];
 

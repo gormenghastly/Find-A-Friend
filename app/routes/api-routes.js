@@ -17,15 +17,14 @@ module.exports = function(app) {
     var diff = 0;
     var newScores = newFriend.scores;
 
-    for (var i = 0; i < newScores.length; i++) {
-      newScores[i] = parseInt(newScores[i]);
-    }
-
     for (var i = 0; i < friendData.length; i++) {
+      diff = 0;
       for (var j = 0; j < friendData[i].scores.length; j++) {
-        diff += Math.abs(friendData[i].scores[j] - newScores[j]);
+        diff += Math.abs(
+          parseInt(friendData[i].scores[j]) - parseInt(newScores[j])
+        );
       }
-      if (diff < bestFriend.bestDiff) {
+      if (diff <= bestFriend.bestDiff) {
         bestFriend.name = friendData[i].name;
         bestFriend.photo = friendData[i].photo;
       }
