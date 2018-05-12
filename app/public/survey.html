@@ -144,18 +144,18 @@
                 </form>
             </div>
         </div>
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLongTitle">Your Friend is...</h3>
+                        <h3 class="modal-title" id="modal-title">Your Friend is...</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <h4 id="friend-name"></h4>
-                        <img src="" alt="friend photo" height="100" width="100" id="friend photo">
+                        <img src="" alt="friend photo" height="200" width="200" id="friend-photo">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -170,6 +170,8 @@
     </div>
     <script type="text/javascript">
         $(document).on('click', '#submit', function () {
+            event.preventDefault();
+
             var newFriend = {
                 name: $('#name').val().trim(),
                 photo: $('#photo').val().trim(),
@@ -191,19 +193,9 @@
 
             $.post(currentURL + '/api/friends', newFriend, function (data) {
 
-                $('#name').val('');
-                $('#phone').val('');
-                $('#questOne').val('');
-                $('#questTwo').val('');
-                $('#questThree').val('');
-                $('#questFour').val('');
-                $('#questFive').val('');
-                $('#questSix').val('');
-                $('#questSeven').val('');
-                $('#questEight').val('');
-                $('#questNine').val('');
-                $('#questTen').val('');
-
+                $('#friend-name').text(data.name);
+                $('friend-photo').attr('src', data.photo);
+                $("#results-modal").modal('toggle');
             });
 
 

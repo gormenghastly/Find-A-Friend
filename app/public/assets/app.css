@@ -54,3 +54,14 @@ label {
   color: black;
   font-family: 'Titan One', cursive;
 }
+
+#modal-title {
+  font-family: 'Titan One', cursive;
+  font-size: 1.5em;
+}
+
+#friend-name {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+}

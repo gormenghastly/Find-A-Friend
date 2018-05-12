@@ -8,8 +8,4 @@ module.exports = function(app) {
   app.get('/survey', function(req, res) {
     res.sendFile(path.join(__dirname + '/../public/survey.html'));
   });
-
-  app.get('/result', function(req, res) {
-    res.sendFile(path.join(__dirname + '/../public/result.html'));
-  });
 };
